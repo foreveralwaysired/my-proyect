@@ -1,39 +1,44 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     allConfig: null,
-    themeColor: 'blue',
-    componentTheme: 'blue',
-    menuMode: 'sidebar',
+    menuMode: 'static',
+    colorScheme: 'light',
+    inputStyle: 'outlined',
     ripple: true,
-    colorScheme: 'dark',
+    menuTheme: 'layout-sidebar-white',
+    componentTheme: 'blue'
 };
 
 export const configuracionTemaSlice = createSlice({
-    name: "ui", initialState,
+    name: 'ui',
+    initialState,
     reducers: {
         onChangeAllConfig: (state, { payload }) => {
             state.allConfig = payload;
         },
-        onChangeThemeColor: (state, { payload }) => {
-            state.themeColor = payload;
-        },
-        onChangeComponentTheme: (state, { payload }) => {
-            state.componentTheme = payload;
-        },
         onChangeMenuMode: (state, { payload }) => {
             state.menuMode = payload;
-        },
-        onChangeRipple: (state, { payload }) => {
-            state.ripple = payload;
         },
         onChangeScheme: (state, { payload }) => {
             state.colorScheme = payload;
         },
+        onChangeInputStyle: (state, { payload }) => {
+            state.inputStyle = payload;
+        },
+        onChangeRipple: (state, { payload }) => {
+            state.ripple = payload;
+        },
+        onChangeMenuTheme: (state, { payload }) => {
+            state.menuTheme = payload;
+        },
+        onChangeComponentTheme: (state, { payload }) => {
+            state.componentTheme = payload;
+        },
         onResetConfTemplate: () => {
             return initialState;
-        },
-    },
-})
+        }
+    }
+});
 
-export const { onChangeAllConfig, onChangeThemeColor, onChangeComponentTheme, onChangeMenuMode, onChangeRipple, onChangeScheme, onResetConfTemplate, } = configuracionTemaSlice.actions;
+export const { onChangeAllConfig, onChangeMenuMode, onChangeScheme, onChangeInputStyle, onChangeRipple, onChangeMenuTheme, onChangeComponentTheme, onResetConfTemplate } = configuracionTemaSlice.actions;

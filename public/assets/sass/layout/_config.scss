@@ -1,21 +1,20 @@
 .layout-config {
-    width: 16em;
+    width: $rightSidebarWidth;
     height: 100%;
     position: fixed;
     right: 0;
     top: 0;
     padding: 1rem;
     overflow: auto;
-    background: $bodyBg;
-    color: $textColor !important;
+    background: $rightSidebarBg;
     z-index: 999;
-    border-left: 0 none;
+    border-left: $overlayBorder;
     transform: translateX(100%);
-    transition: transform .4s cubic-bezier(.05,.74,.2,.99);
+    transition: transform $animationDuration $animationTimingFunction;
 
     &.layout-config-active {
         transform: translateX(0);
-        box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+        box-shadow: $overlayShadow;
 
         .layout-config-content {
             .layout-config-button {
@@ -28,7 +27,7 @@
 
     p {
         line-height: 1.5rem;
-        color: #000000 !important;
+        color: $textSecondaryColor;
     }
 
     .layout-themes {
@@ -40,7 +39,8 @@
         }
 
 
-        a, button {
+        a,
+        .p-link {
             width: 2rem;
             height: 2rem;
             border-radius: $borderRadius;
@@ -58,7 +58,6 @@
                 left: 50%;
                 margin-left: -.5rem;
                 margin-top: -.5rem;
-                color: #ffffff;
             }
 
             &:hover {
@@ -68,35 +67,30 @@
     }
 }
 
-.layout-config-button {
-    display: block;
+.layout-config-button.p-button {
     position: fixed;
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
-    background: $primaryColor !important;
-    color: $primaryTextColor;
-    text-align: center !important;
-    top: 50%;
+    top: 40%;
     right: 0;
-    border-radius: 0;
-    margin-top: -1.5rem !important;
-    border-top-left-radius: $borderRadius;
-    border-bottom-left-radius: $borderRadius;
-    transition: background-color $transitionDuration;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     overflow: hidden;
     cursor: pointer;
     z-index: 999;
     box-shadow: -.25rem 0 1rem rgba(0,0,0,.15);
+    transition: background-color $transitionDuration;
+    background: $accentColor;
+    color: $accentTextColor;
+    border-right: none;
 
-    i {
-        font-size: 2rem;
+    .p-button-icon {
+        font-size: 2.5rem;
         line-height: inherit;
         transform: rotate(0deg);
         transition: transform 1s;
     }
 
-    &:hover {
-        background: lighten($primaryColor, 5%) !important;
-    }
+
 }

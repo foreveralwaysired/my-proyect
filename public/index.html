@@ -1,65 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Servicio Social</title>
 
-<head>
-	<meta charset="utf-8" />
-	<title>Servicio Social</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Servicio Social"/>
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="theme-color" content="#000000" />
-	<meta name="description" content="PrimeReact Atlantis Layout" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 
-	<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-
-	<link id="theme-css" rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/theme/blue/theme-light.css">
-	<link id="layout-css" rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/layout/css/blue/layout-light.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-		integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-		crossorigin="anonymous"></script>
+    <link id="theme-css" rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/theme/blue/theme-light.css" />
+    <link id="layout-css" rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/layout/css/layout-light.css" />
 </head>
-
-<body>
-	<noscript>
-		<strong>We're sorry but Atlantis doesn't work properly without JavaScript enabled. Please enable it to
-			continue.</strong>
-	</noscript>
-	<div id="root">
-		<div class="loading-wrapper">
-			<svg class="loader12" height="57" stroke="#fff" viewBox="0 0 57 57" width="57"
-				xmlns="http://www.w3.org/2000/svg">
-				<g fill-rule="evenodd" fill="none">
-					<g stroke-width="2" transform="translate(1 1)">
-						<circle class="loader12__path-left" cx="5" cy="50" r="5"></circle>
-						<circle class="loader12__path-top" cx="27" cy="5" r="5"></circle>
-						<circle class="loader12__path-right" cx="50" cy="50" r="5"></circle>
-					</g>
-				</g>
-			</svg>
-		</div>
-	</div>
-	<script>
-		const loader12Timeline = new TimelineMax({ repeat: -1 });
-
-		loader12Timeline.to('.loader12__path-top', 0.75, {
-			attr: {
-				cx: 50,
-				cy: 50
-			}
-		}, "l12_1")
-			.to('.loader12__path-left', 0.75, {
-				attr: {
-					cx: 27,
-					cy: 5
-				}
-			}, "l12_1")
-			.to('.loader12__path-right', 0.75, {
-				attr: {
-					cx: 5,
-					cy: 50
-				}
-			}, "l12_1");
-	</script>
-</body>
-
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div className="loader-container">
+            <div className="loader">
+                <div className="bottom-section">
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                </div>
+                <div className="top-section">
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                    <div className="bottom"></div>
+                </div>
+                <div className="middle"></div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

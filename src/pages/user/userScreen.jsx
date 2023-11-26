@@ -6,13 +6,11 @@ import { useUserStore } from '../../hooks/user/useUserStore';
 export const UserScreen = () => {
     const { startGetLstRegisteredUsers, onClearUserData } = useUserStore();
     const isMounted = useIsMounted();
-    useEffect(() => {
-        startGetLstRegisteredUsers();
-    }, [])
+
 
     useEffect(() => {
         if (isMounted()) {
-            startGetLstRegisteredUsers();
+            // startGetLstRegisteredUsers();
         }
         return () => {
             onClearUserData();
@@ -25,7 +23,7 @@ export const UserScreen = () => {
                 <div className="col-12">
                     <h1 className="text-center">Usuarios</h1>
                 </div>
-                <UserForm />
+                {/* <UserForm /> */}
             </div>
         </div>
     )

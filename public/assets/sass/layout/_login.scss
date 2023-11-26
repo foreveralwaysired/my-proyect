@@ -1,107 +1,162 @@
 .login-body {
-    display: flex;
-    box-sizing: border-box;
-    min-height: 100vh;
+    background: $bodyBg;
+    color: $textColor;
 
-    .login-image {
+    .login-wrapper {
+        @include flex();
         height: 100vh;
 
-        img {
-            height: 100vh;
-        }
-    }
+        .login-panel {
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            @include flex();
+            @include flex-align-center();
+            @include flex-justify-between();
+            @include flex-direction-column();
 
-    .login-panel {
-        background-image: $bodyImage;
-        background-repeat: no-repeat;
-        text-align: center;
-        width: 100%;
-        padding: 260px 100px 75px 100px;
-        box-sizing: border-box;
-
-        .login-logo {
-            width: 45px;
-        }
-
-        .login-appname {
-            width: 100px;
-            margin-left: 1rem;
-        }
-
-        .form-container {
-            input {
-                display: block;
-                max-width: 320px;
-                min-width: 270px;
-                margin-bottom: 10px;
+            .logo {
+                height: 50px;
             }
 
-            a, button {
-                color: $textThirdColor;
-                margin-bottom: 20px;
-                font-size: 11px;
+            .login-form {
+                @include flex();
+                @include flex-align-center();
+                @include flex-direction-column();
+                > p {
+                    font-weight: 600;
+                    margin: 0;
+                    color:$textSecondaryColor;
+                    margin-bottom: 32px;
+
+                    > a {
+                        color: $linkColor;
+                        cursor: pointer;
+                    }
+                }
+
+                > .p-password {
+                    width: 85%;
+                    max-width: 310px;
+                    margin-bottom: 20px;
+
+                    .p-password-input {
+                        width: 100%;
+                    }
+                }
+
+                > input {
+                    width: 85%;
+                    max-width: 310px;
+                    margin-bottom: 20px;
+                }
+
+                > button {
+                    width: 85%;
+                    max-width: 310px;
+                }
             }
-        }
 
-        .button-container {
-            button {
-                display: block;
-                max-width: 320px;
-                margin-bottom: 32px;
-            }
+            p {
+                font-weight: 600;
+                margin: 0;
+                color:$textSecondaryColor;
 
-            > span {
-                display: flex;
-                font-size: 11px;
-                color: $textThirdColor;
-
-                button {
-                    font-size: 11px;
-                    cursor: pointer;
-                    margin-left: .25rem;
+                > a {
+                    color: $linkColor;
                 }
             }
         }
 
-        .login-footer {
-            position: absolute;
-            bottom: 75px;
+        .login-image {
+            width: 70%;
+            height: 100%;
+            @include flex();
+            @include flex-align-center();
+            @include flex-justify-between();
+            @include flex-direction-column();
+            padding: 40px 20px;
 
-            .login-footer-logo-container {
-                padding-right: 1.5rem;
-                border-right: 1px solid $dividerColor;
-
-                .login-footer-logo {
-                    width: 22px;
+            .login-image-content {
+                > h1 {
+                    font-size: 60px;
+                    margin: 0;
+                    color: #ffffff;
                 }
 
-                .login-footer-appname {
-                    width: 45px;
-                    margin-left: .5rem;
+                h3 {
+                    font-size: 24px;
+                    color: #ffffff;
+                    margin: 0;
+                    font-weight: 600;
+                    margin-top: 32px;
                 }
-
             }
 
-            span {
-                margin-left: 1rem;
-                font-size: 11px;
-                color: $textThirdColor;
+            .image-footer {
+                @include flex();
+                @include flex-align-center();
+
+                > p {
+                    font-weight: 600;
+                    margin: 0;
+                    color: #ffffff;
+                    margin-right: 20px;
+                }
+
+                .icons {
+                    @include flex();
+                    @include flex-align-center();
+
+                    i {
+                        font-size: 22px;
+                        color:#2196F3;
+                        margin-right: 20px;
+                        cursor: pointer;
+                        height: 32px;
+                        width: 32px;
+                        border-radius: 50%;
+                        @include flex();
+                        @include flex-align-center();
+                        @include flex-justify-center();
+                        transition: opacity $transitionDuration;
+                        background: #ffffff;
+                        opacity: .7;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-@media (max-width: $tabletBreakpoint) {
+@media(min-width:993px) {
     .login-body {
-        .login-image {
-            display: none;
+        .login-wrapper {
+            .login-image {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url("../../layout/images/pages/bg-login.jpg");
+            }
         }
+    }
+}
 
-        .login-panel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 50px;
+@media(max-width:992px) {
+    .login-body {
+        .login-wrapper {
+            .login-panel {
+                width: 100%;
+                z-index: 2;
+            }
+
+            .login-image {
+                display: none;
+            }
         }
     }
 }

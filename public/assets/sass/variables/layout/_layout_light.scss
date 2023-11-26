@@ -1,70 +1,42 @@
-@import './_common';
+@import '_common';
 
-$bodyBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
-$bodyImage:  url("../../../layout/images/effect-onlight.png") !default;
-$textColor:#44486D !default;
-$textSecondaryColor:#676B89 !default;
-$textThirdColor: #8A8EA6 !default;
-$dividerColor:rgba(68, 72, 109, 0.2) !default;
-
-//loader
-$loaderPathColor:#0A061A !default;
+$bodyBg: #f8f9fa !default;
+$textColor:#495057 !default;
+$textSecondaryColor:#6c757d !default;
+$dividerColor:#dee2e6 !default;
+$itemHoverBg:#e9ecef !default;
+$focusShadow:0 0 0 0.2rem #BBDEFB !default;
+$linkColor: #1976D2 !default;
+$overlayBorder:0 none !default;
+$overlayShadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;
 
 //card
-$cardBg: rgba(255, 255, 255, 0.9) !default;
+$cardBg: #ffffff !default;
 $cardBorder: 0 none !default;
 
 //topbar
-$topbarTextColor: $textSecondaryColor !default;
-$topbarTextHoverColor: $textColor !default;
-$topbarIconBg: rgba(68, 72, 109, 0.07) !default;
-$topbarIconHoverBg: rgba(68, 72, 109, 0.12) !default;
+$topbarBg: #ffffff !default;
+$topbarBottomBorder: 1px solid $dividerColor !default;
+$topbarTextColor: $textColor !default;
+$topbarIconBg: #f8f9fa !default;
+$topbarIconHoverBg: #e9ecef !default;
 
-$topbarSubmenuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%)!default;
-$topbarSubmenuItemHoverBgColor: rgba(68, 72, 109, 0.07) !default;
+//accent
+$accentColor: #1976D2 !default;
+$accentTextColor: #ffffff !default;
 
-//menu
-$menuWidth: 21rem !default;
-$slimMenuWidth: 5.857rem !default;
-$sidebarInactiveMenuWidth: 6.571rem !default;
-$menuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
-$menuIconBg: rgba(68, 72, 109, 0.07) !default;
-$menuIconHoverBg: rgba(68, 72, 109, 0.12) !default;
-$menuIconTextColor: $textSecondaryColor !default;
-$menuIconHoverTextColor: $textColor !default;
+//sidebar
+$sidebarWidth: 16rem !default;
+$slimSidebarWidth: 6rem !default;
 
-$rootMenuItemTextColor: $textSecondaryColor !default;
-$rootMenuItemHoverTextColor: $textColor !default;
-$rootMenuItemHoverBg: rgba(68, 72, 109, 0.07) !default;
-$activeRootMenuItemTextColor: $primaryColor !default;
+//search
+$searchBg:#adb5bd !default;
+$searchBorder: 0 none !default;
 
-$submenuItemTextColor: $textColor !default;
-$submenuItemHoverTextColor: $textColor !default;
-$submenuItemHoverBg: rgba(68, 72, 109, 0.07) !default;
-$activeSubmenuItemTextColor: $primaryColor !default;
+//footer
+$footerBg: #ffffff !default;
+$footerBorder: 1px solid $dividerColor !default;
 
-$overlayMenuActiveBg: rgba(68, 72, 109, 0.07) !default;
-$overlayMenuItemActiveBg: $primaryColor !default;
-$overlayMenuItemActiveTextColor: $primaryTextColor !default;
-
-$slimRootMenuItemIconColor: $textColor !default;
-$slimActiveRootMenuItemBgColor: $primaryColor !default;
-$slimActiveRootMenuItemTextColor: $primaryTextColor !default;
-$slimMenuItemTextColor: $textColor !default;
-
-//inline menu
-$inlineMenuImageHoverBorderColor: #8A8EA6 !default;
-
-//rightmenu
-$rightMenuWidth: 24.571rem !default;
-$rightMenuBg: linear-gradient(180deg, #F6F9FC 0%, #ECECF9 100%) !default;
-$rightMenuButtonBg: rgba(68, 72, 109, 0.07) !default;
-$rightMenuListItemBg: rgba(68, 72, 109, 0.07) !default;
-
-//dashboard
-$progressBarBg: rgba(68, 72, 109, 0.12) !default;
-
-//pages
-$helpHeaderBg: linear-gradient(179.2deg, rgba(15, 139, 253, 0.15) 0.69%, rgba(15, 139, 253, 0) 108.44%), rgba(255, 255, 255, 0.9) !default;
-$helpHeaderImage:  url("../../../layout/images/effect-onlight.svg") !default;
-$exceptionPagesImage: url("../../../layout/images/pages/exception-onlight.png") !default;
+//sidebar right
+$rightSidebarWidth: 16rem !default;
+$rightSidebarBg: #ffffff !default;

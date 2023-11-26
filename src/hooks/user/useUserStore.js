@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { alertNotification } from "../../helpers/helpers";
-import { getLstRegisteredUsers, postAddNewUser } from "../../services/userService";
+import { getLstRegisteredUsers, postAddNewUser } from "../../service/userService";
 import { onClearAllValues, onLoadLstRegisteredUsers, onLoadUserData } from "../../store/slice/user/userSlice";
 
 export const useUserStore = () => {
